@@ -23,10 +23,10 @@ function App() {
     const wordF=dictionary.find((e)=>e.word.toLowerCase()===search.toLowerCase())
     if(wordF){
       setDefinition(wordF.meaning)
-      setFound(true)
+      
     }else{
-      setDefinition("Word not found in the dictonary.")
-      setFound(false)
+      setDefinition("Word not found in the dictionary.")
+      
     }
   }
   return (
