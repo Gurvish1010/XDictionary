@@ -5,8 +5,6 @@ import './App.css'
 function App() {
   const [search, setSearch] = useState("")
   const[definition,setDefinition]=useState("")
-  const[found,setFound]=useState(false)
-  const[searched,setSearched]=useState(false)
 
   const dictionary=[
     
@@ -22,7 +20,6 @@ function App() {
   ]
 
   const searchFun=()=>{
-    setSearched(true)
     const wordF=dictionary.find((e)=>e.word.toLowerCase()===search.toLowerCase())
     if(wordF){
       setDefinition(wordF.meaning)
@@ -35,7 +32,7 @@ function App() {
   return (
     
       <div>
-        <h1>Dictonary App</h1>
+        <h1>Dictionary App</h1>
         <div>
           <input type="text"
             placeholder='Search for a word...'
@@ -47,9 +44,9 @@ function App() {
         </div>
 
         <div>
-          {(!searched||found)&&(
+          
             <h3>Definition:</h3>
-          )}
+          
           <p>{definition}</p>
           
         </div>
